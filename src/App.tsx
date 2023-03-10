@@ -1,19 +1,19 @@
 import { Routes, Route } from "react-router-dom";
-import About from "./views/About/TheAbout";
-import Home from "./views/Home/TheHome";
-import NotFound from "./views/NotFound/NotFound";
+
 import { Navbar } from "./components/NavBar";
+import { Contact, Experience, Home, NotFound, Projects, Skills } from "./views";
 
 const App = () => {
   return (
     <>
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
       <Navbar>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Navbar>

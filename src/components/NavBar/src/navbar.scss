@@ -1,0 +1,59 @@
+.navbar {
+  background-color: #3c83f3;
+  padding: 2vh 1vw;
+
+  .logo {
+    .title {
+      color: #fff;
+    }
+  }
+  .menuLinks {
+    .ant-menu-root {
+      color: #fff;
+
+      .ant-menu-item {
+        border-radius: 4px;
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin: 0 0.5vw;
+        padding: 0.5vw 0.7vw;
+        text-decoration: none;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          background: rgba(68, 68, 68, 0.55);
+          border-bottom: 3px solid rgba(40, 40, 40, 0.67);
+          color: #fff;
+        }
+      }
+
+      .ant-menu-item-selected {
+        background: rgba(68, 68, 68, 0.55);
+        border-bottom: 3px solid rgba(40, 40, 40, 0.67);
+        border-radius: 4px;
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin: 0 0.5vw;
+        padding: 0.5vw 0.7vw;
+
+        text-decoration: none;
+        transition: all 0.5s ease-in-out;
+
+        &:after {
+          border: none;
+        }
+      }
+    }
+  }
+
+  .ant-menu-light {
+    border: none;
+    background-color: initial;
+  }
+  .ant-typography {
+    margin: 0;
+  }
+}
