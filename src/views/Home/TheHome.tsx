@@ -1,14 +1,29 @@
-import { Typography } from "antd";
+import { Typography, Row, Col } from "antd";
 import React from "react";
+
+import "./home.scss";
+import { HomeData, LinksData } from "./const";
+
+const welcomeText = `I am, ${HomeData.firstName} ${HomeData.lastName}`;
+
+import profilePic from "../../assets/profile.png";
 const { Title } = Typography;
 
 const Home: React.FC = () => (
   <>
-    <Title>h1. Home</Title>
-    <Title level={2}>h2. Home</Title>
-    <Title level={3}>h3. Home</Title>
-    <Title level={4}>h4. Home</Title>
-    <Title level={5}>h5. Home</Title>
+    <div className="home flex flex-col justify-center items-center">
+      <img src={profilePic} alt="Profile" className="img" />
+      <Title level={2}>{welcomeText}</Title>
+      <Title level={3} style={{ margin: 0 }}>{HomeData.about1}</Title>
+      <Title level={3} >{HomeData.about2}</Title>
+      <div className="links">
+        {LinksData.map((item) => (
+          <a href={item.link} target="_blank" rel="noreferrer" key={item.title}>
+            {item.icon}
+          </a>
+        ))}
+      </div>
+    </div>
   </>
 );
 
